@@ -1,0 +1,32 @@
+pipeline {                                    
+    agent { label 'Project1' }                              
+
+    environment {                             
+        PATH = "/opt/maven/bin:$PATH"         
+    }                                         
+
+    stages {                                  
+        
+        stage("build") {                      
+            steps {                           
+                 sh 'mvn clean package'                                 
+            }                                 
+        }                                                            
+
+        stage('SonarQube analysis') {         
+            environment {                     
+                scannerHome = tool 'ilango2495-sonarqube'  
+                                              
+            }                                 
+
+            steps {                           
+                withSonarQubeEnv('ilango2495-sonarqube-server') {
+                                              
+                    sh "${scannerHome}/bin/sonar-scanner"  
+                                              
+                }                             
+            }                                 
+        }                                     
+
+    }                                       
+}
