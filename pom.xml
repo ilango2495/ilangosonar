@@ -12,11 +12,11 @@
   <distributionManagement>
         <repository>
             <id>github</id>
-            <url>https://maven.pkg.github.com/ilango2495/ilangosonar</url>
+            <url>https://github.com/ilango2495/ilangosonar.git</url>
         </repository>
         <snapshotRepository>
             <id>github</id>
-            <url>https://maven.pkg.github.com/ilango2495/ilangosonar</url>
+            <url>https://github.com/ilango2495/ilangosonar.git</url>
         </snapshotRepository>
     </distributionManagement>
 
