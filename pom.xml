@@ -9,6 +9,17 @@
   <version>1.0.0</version>
   <packaging>war</packaging>
 
+  <distributionManagement>
+        <repository>
+            <id>github</id>
+            <url>https://github.com/ilango2495/ilangosonar.git</url>
+        </repository>
+        <snapshotRepository>
+            <id>github</id>
+            <url>https://github.com/ilango2495/ilangosonar.git/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
   <name>ilangosonar Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>

@@ -1,6 +1,5 @@
 pipeline {                                    
     agent { label 'Project1' }                              
-
     environment {                             
         PATH = "/opt/maven/bin:$PATH"         
     }                                         
@@ -9,7 +8,7 @@ pipeline {
         
         stage("build") {                      
             steps {                           
-                 sh 'mvn clean deploy'                                 
+                 sh 'clean deploy'                                 
             }                                 
         }                                                            
 
